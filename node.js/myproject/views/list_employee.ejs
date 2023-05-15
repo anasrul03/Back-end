@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <ul>
+      <% employee.forEach((employee)=> {%> <% if(3 >= employee.tenure &&
+      employee.tenure >= 1){%>
+      <li>
+        <div class="card text-white bg-danger mb-3" style="max-width: 100rem">
+          <div class="card-body">
+            <h5 class="card-title">
+              <b><%= employee.name %></b> | Age: <%= employee.age %> | Tenure:
+              <%= employee.tenure%> year
+            </h5>
+            <h6 class="card-subtitle mb-2 text-light">
+              Department :<%= employee.department %>
+            </h6>
+            <p class="card-text"><%= employee.quote %></p>
+          </div>
+        </div>
+        <%}else if (employee.tenure > 3){%>
+        <div class="card text-white bg-success mb-3" style="max-width: 100rem">
+          <!-- <div class="card-header">Header</div> -->
+          <div class="card-body">
+            <h5 class="card-title">
+              <b><%= employee.name %></b> | Age: <%= employee.age %> | Tenure:
+              <%= employee.tenure%> year
+            </h5>
+            <h6 class="card-subtitle mb-2 text-light">
+              Department :<%= employee.department %>
+            </h6>
+            <p class="card-text"><%= employee.quote %></p>
+          </div>
+        </div>
+      </li>
+      <% } %> <%})%>
+    </ul>
+  </body>
+</html>
